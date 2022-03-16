@@ -1,5 +1,5 @@
 const repeatString = function (string, num) {
-  let container = ""
+  container = ""
   if (num < 0) {
     return "ERROR"
   }
@@ -8,5 +8,6 @@ const repeatString = function (string, num) {
   }
   return container
 }
+
 // Do not edit below this line
-smodule.exports = repeatString
+module.exports = repeatString
