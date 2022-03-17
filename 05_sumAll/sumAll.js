@@ -1,19 +1,23 @@
 const sumAll = function (beginSum, endSum) {
-  if (beginSum == null || endSum == null || beginSum < 0 || endSum < 0) {
+  if (
+    beginSum < 0 ||
+    endSum < 0 ||
+    typeof beginSum !== "number" ||
+    typeof endSum !== "number"
+  ) {
     return "ERROR"
   }
-
   let adder = 0
-  if (endSum > beginSum) {
+  if (beginSum > endSum) {
     for (let i = endSum; i <= beginSum; i++) {
       adder += i
     }
-}
-else {
+  } else {
     for (let i = beginSum; i <= endSum; i++) {
-        adder += i
+      adder += i
     }
-    return adder
+  }
+  return adder
 }
 
 // Do not edit below this line
